@@ -20,13 +20,17 @@ build:
     - "tensorizer==1.0.1"
     - "jinja2==3.1.2"
     - "deepspeed==0.8.3"
+    - "transformers==4.28.1"
 
   run:
   # speed up downloading weights with gcloud storage cp
+  - "apt-get update -y"
+  - "apt-get install espeak -y"
   - "echo 'deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main' | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list"
   - "curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -"
   - "apt-get update && apt-get install google-cloud-cli"
-    
+  - "pip install --no-cache-dir git+https://github.com/joehoover/bragi.git@90db4fb"
+  - "pip install git+https://github.com/quadrismegistus/poesy.git"
 
 # predict.py defines how predictions are run on your model
 predict: "predict.py:Predictor"
