@@ -1,4 +1,4 @@
-# LLaMA Cog template 🦙
+# Poet Vicuna Template
 
 Vicuna-13B is an open source chatbot based on LLaMA-13B. It was developed by training LLaMA-13B on user-shared conversations collected from [ShareGPT](https://sharegpt.com/). LLaMA is a [new open-source language model from Meta Research](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/) that performs as well as comparable closed-source models. Using GPT-4 to evaluate model outputs, the developers of Vicuna-13B found that it not only outperforms comparable models like Stanford Alpaca, but also reaches 90% of the quality of OpenAI's ChatGPT and Google Bard.
 
